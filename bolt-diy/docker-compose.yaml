@@ -11,7 +11,7 @@ services:
           - boltai.local
 
   app:
-    image: bolt-ai:development  # ⚠️ Assure-toi que cette image est accessible
+    image: ghcr.io/stackblitz-labs/bolt.diy:latest  # ⚠️ Assure-toi que cette image est accessible
     restart: unless-stopped
     ports:
       - "5173:5173"

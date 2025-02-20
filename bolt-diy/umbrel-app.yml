@@ -2,6 +2,7 @@ manifestVersion: 1.1
 id: bolt-diy-boltai
 category: development
 name: BoltAI
+icon: https://pbs.twimg.com/profile_images/1866801072649453569/SXnpk8Zr_400x400.jpg
 version: "1.0.0"
 tagline: Outil IA NoCode
 description: >-
