@@ -24,3 +24,4 @@ submitter: Bolt
 submission: https://github.com/massilia68/umbrel-app-perso
 releaseNotes: >-
   Première version compatible Umbrel.
+build: true

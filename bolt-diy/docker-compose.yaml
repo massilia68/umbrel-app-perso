@@ -11,26 +11,24 @@ services:
           - boltai.local
 
   app:
-    image: ghcr.io/stackblitz-labs/bolt.diy:latest  # ⚠️ Assure-toi que cette image est accessible
+    build:
+      context: .
+      dockerfile: Dockerfile  # Assure-toi que le Dockerfile est bien présent à la racine du dossier.
+      target: bolt-ai-development
     restart: unless-stopped
     ports:
       - "5173:5173"
     environment:
       - NODE_ENV=development
       - PORT=5173
-      - VITE_HMR_PROTOCOL=ws
-      - VITE_HMR_HOST=localhost
-      - VITE_HMR_PORT=5173
-      - CHOKIDAR_USEPOLLING=true
-      - WATCHPACK_POLLING=true
       - GROQ_API_KEY=${GROQ_API_KEY:-default_value}
       - HUGGINGFACE_API_KEY=${HUGGINGFACE_API_KEY:-default_value}
       - OPENAI_API_KEY=${OPENAI_API_KEY:-default_value}
       - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY:-default_value}
       - OPEN_ROUTER_API_KEY=${OPEN_ROUTER_API_KEY:-default_value}
-      - XAI_API_KEY=${XAI_API_KEY:-default_value}
       - GOOGLE_GENERATIVE_AI_API_KEY=${GOOGLE_GENERATIVE_AI_API_KEY:-default_value}
       - OLLAMA_API_BASE_URL=${OLLAMA_API_BASE_URL:-default_value}
+      - XAI_API_KEY=${XAI_API_KEY:-default_value}
       - TOGETHER_API_KEY=${TOGETHER_API_KEY:-default_value}
       - TOGETHER_API_BASE_URL=${TOGETHER_API_BASE_URL:-default_value}
       - AWS_BEDROCK_CONFIG=${AWS_BEDROCK_CONFIG:-default_value}
