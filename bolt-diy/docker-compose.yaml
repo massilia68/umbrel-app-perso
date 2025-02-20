@@ -11,10 +11,7 @@ services:
           - boltai.local
 
   app:
-    build:
-      context: .
-      dockerfile: Dockerfile  # Assure-toi que le Dockerfile est bien présent dans le repo GitHub
-      target: bolt-ai-production
+    image: deepdelver/bolt.diy:lastest
     restart: unless-stopped
     ports:
       - "5173:5173"
