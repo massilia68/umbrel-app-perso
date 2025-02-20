@@ -1,17 +1,13 @@
-manifestVersion: 1
-id: bolt-diy
-name: Bolt.diy
+id: bolt-diy-boltai
+name: BoltAI
 tagline: Bolt outil NOCODE IA
 icon: https://pbs.twimg.com/profile_images/1866801072649453569/SXnpk8Zr_400x400.jpg
 category: Development
 version: "1.0.0"
-port: 4000
+port: 5173
+path: "/"
 description: >-
-  Add your app's description here.
-
-
-Sign In. Get Started. New! Create Native Mobile Apps with Bolt. What do you want to build? Prompt, run, edit, and deploy full-stack web and mobile apps. Update.
-
+  Outil IA Nocode pour créer des applications sans code.
 
 developer: Bolt
 website: https://bolt.new/
@@ -24,8 +20,7 @@ gallery:
   - https://www.productivboost.com/wp-content/uploads/2025/01/Bolt.new-AI-1024x512.jpg
   - https://framerusercontent.com/images/uAlMV7tgdP9MVLPPAT8ysVXPKtw.png
 releaseNotes: >-
-  Add what's new in the latest version of your app here.
+  Ajout de la première version de BoltAI.
 dependencies: []
-path: ""
 defaultUsername: ""
 defaultPassword: ""
