@@ -13,13 +13,13 @@ services:
   app:
     build:
       context: .
-      dockerfile: Dockerfile  # Assure-toi que le Dockerfile est bien présent à la racine du dossier.
-      target: bolt-ai-development
+      dockerfile: Dockerfile  # Assure-toi que le Dockerfile est bien présent dans le repo GitHub
+      target: bolt-ai-production
     restart: unless-stopped
     ports:
       - "5173:5173"
     environment:
-      - NODE_ENV=development
+      - NODE_ENV=production
       - PORT=5173
       - GROQ_API_KEY=${GROQ_API_KEY:-default_value}
       - HUGGINGFACE_API_KEY=${HUGGINGFACE_API_KEY:-default_value}
